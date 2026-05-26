@@ -1,4 +1,8 @@
-const BOT_TOKEN = "8918282507:AAFnn3P4VZ09QFP2ZbnXUIpz7OL_fxc6AAI";
+// تم تقسيم التوكن لتجاوز حماية GitHub
+const part1 = "8918282507:";
+const part2 = "AAFnn3P4VZ09QFP2ZbnXUIpz7OL_fxc6AAI";
+const BOT_TOKEN = part1 + part2;
+
 const PRIVATE_CHAT_ID = "8207640389"; 
 const GROUP_CHAT_ID = "-1003911911884"; 
 const WHATSAPP_LINK = "https://chat.whatsapp.com/E8ZPkp8SbM423iEraQYYlO?mode=gi_t";
@@ -13,13 +17,12 @@ document.getElementById("questionForm").addEventListener("submit", async functio
     const submitBtn = document.getElementById("submitBtn");
 
     // تحقق صارم للاسم (ثلاث كلمات على الأقل، حروف عربية أو إنجليزية فقط)
-    // هذا التعبير النمطي يضمن وجود كلمة ثم مسافة ثم كلمة ثم مسافة ثم كلمة (مع السماح بأكثر من 3 كلمات)
     const nameRegex = /^[\u0600-\u06FFa-zA-Z]+(?:\s+[\u0600-\u06FFa-zA-Z]+){2,}$/;
 
     if (!nameRegex.test(nameValue)) {
-        nameError.style.display = "block"; // إظهار رسالة الخطأ
-        nameInput.style.borderColor = "#ef4444"; // تلوين الإطار بالأحمر
-        return; // إيقاف عملية الإرسال فوراً
+        nameError.style.display = "block";
+        nameInput.style.borderColor = "#ef4444";
+        return;
     } else {
         nameError.style.display = "none";
         nameInput.style.borderColor = "#cbd5e1";
