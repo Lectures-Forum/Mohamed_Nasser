@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Mohamed Nasser | VIP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- تأثيرات الإضاءة المتحركة في الخلفية -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <header class="main-header">
+        <h1 class="neon-title">Mr. Mohamed Nasser</h1>
+        <p class="subtitle">منصة استقبال أسئلة الطلاب</p>
+    </header>
+
+    <main class="container">
+        <form id="questionForm">
+            
+            <!-- القسم الأول: بيانات الطالب -->
+            <div class="form-section glass-card">
+                <div class="section-header">
+                    <span class="step-number">1</span>
+                    <h3>بيانات الطالب</h3>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="studentName" placeholder="مثال: أحمد محمد محمود" required>
+                    <small id="nameError" class="error-msg">⚠️ يرجى كتابة الاسم ثلاثي باللغة العربية أو الإنجليزية بشكل صحيح.</small>
+                </div>
+            </div>
+
+            <!-- القسم الثاني: السؤال -->
+            <div class="form-section glass-card">
+                <div class="section-header">
+                    <span class="step-number">2</span>
+                    <h3>سؤال المستر</h3>
+                </div>
+                <div class="input-wrapper">
+                    <textarea id="studentQuestion" rows="5" placeholder="اكتب تفاصيل سؤالك هنا بوضوح..." required></textarea>
+                </div>
+            </div>
+
+            <!-- زر الإرسال -->
+            <button type="submit" id="submitBtn">
+                <span>أرسل السؤال وانضم لجروب الواتساب</span>
+            </button>
+            
+        </form>
+    </main>
+
+    <script src="App.js"></script>
+</body>
+</html>
